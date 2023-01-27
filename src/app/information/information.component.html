@@ -1,11 +1,11 @@
-<mat-form-field appearance="outline">
+<mat-form-field class="form-field" appearance="outline">
     <mat-label>Date of Birth</mat-label>
   <input matInput [matDatepicker]="picker">
   <mat-hint>MM/DD/YYYY</mat-hint>
   <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-  <mat-datepicker #picker></mat-datepicker>
+  <mat-datepicker #picker/>
 </mat-form-field>
-<mat-form-field appearance="outline">
+<mat-form-field class="form-field" appearance="outline">
     <mat-label>Gender</mat-label>
     <mat-select>
         <mat-option value="one">Masculine</mat-option>
@@ -13,11 +13,7 @@
         <mat-option value="three">Other</mat-option>
     </mat-select>
 </mat-form-field>
-<mat-form-field appearance="outline">
+<mat-form-field class="form-field" appearance="outline">
     <mat-label>ID Number</mat-label>
     <input type="number" matInput>
 </mat-form-field>
-
-<button mat-flat-button class="button">Next</button>
-
-<router-outlet></router-outlet>

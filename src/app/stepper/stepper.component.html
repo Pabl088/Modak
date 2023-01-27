@@ -1,0 +1,20 @@
+<mat-stepper class="stepper" [orientation]="(stepperOrientation | async)!">
+    <mat-step [stepControl]="firstFormGroup" label="Personal Information">
+        <form class="stepper-form" [formGroup]="firstFormGroup">
+            <app-information class="stepper-form-component" />
+                <button class="stepper-form-button" matStepperNext>Next</button>
+        </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup" label="Address">
+        <form class="stepper-form" [formGroup]="secondFormGroup">
+            <app-address class="stepper-form-component"/>
+                <button class="stepper-form-button" matStepperNext>Next</button>
+        </form>
+    </mat-step>
+    <mat-step [stepControl]="thirdFormGroup" label="Payment">
+        <form class="stepper-form" [formGroup]="thirdFormGroup">
+            <app-payment class="stepper-form-component"/>
+                <button class="stepper-form-button" matStepperNext>Done</button>
+        </form>
+    </mat-step>
+</mat-stepper>
