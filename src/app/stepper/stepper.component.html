@@ -1,20 +1,23 @@
 <mat-stepper class="stepper" [orientation]="(stepperOrientation | async)!">
-    <mat-step [stepControl]="firstFormGroup" label="Personal Information">
-        <form class="stepper-form" [formGroup]="firstFormGroup">
-            <app-information class="stepper-form-component" />
-                <button class="stepper-form-button" matStepperNext>Next</button>
+    <mat-step class="stepper__step" [stepControl]="firstFormGroup" label="Personal Information">
+        <form class="stepper__step__form" [formGroup]="firstFormGroup">
+            <p class="stepper__step__form__p">Please provide us with your personal information to send you the item</p>
+            <app-information class="stepper__step__form__component" />
+            <button class="stepper__step__form__button" matStepperNext>Next</button>
         </form>
     </mat-step>
-    <mat-step [stepControl]="secondFormGroup" label="Address">
-        <form class="stepper-form" [formGroup]="secondFormGroup">
-            <app-address class="stepper-form-component"/>
-                <button class="stepper-form-button" matStepperNext>Next</button>
+    <mat-step class="stepper__step" [stepControl]="secondFormGroup" label="Address">
+        <form class="stepper__step__form" [formGroup]="secondFormGroup">
+            <p class="stepper__step__form__p">Please provide us with your address information to send you the item</p>
+            <app-address class="stepper__step__form__component" />
+            <button class="stepper__step__form__button" matStepperNext>Next</button>
         </form>
     </mat-step>
-    <mat-step [stepControl]="thirdFormGroup" label="Payment">
-        <form class="stepper-form" [formGroup]="thirdFormGroup">
-            <app-payment class="stepper-form-component"/>
-                <button class="stepper-form-button" matStepperNext>Done</button>
+    <mat-step class="stepper__step" [stepControl]="thirdFormGroup" label="Payment">
+        <form class="stepper__step__form" [formGroup]="thirdFormGroup">
+            <p class="stepper__step__form__p">Please provide us with your payment information to complete the buy</p>
+            <app-payment class="stepper__step__form__component" />
+            <button class="stepper__step__form__button" matStepperNext>Done</button>
         </form>
     </mat-step>
 </mat-stepper>

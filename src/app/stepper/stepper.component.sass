@@ -3,14 +3,30 @@
 .stepper
     background-color: rgba(0, 106, 97, 0.08)
 
-.stepper-form
+.stepper__step__form
     display: flex
     flex-direction: column
     align-items: center
+    width: 100%
 
-.stepper-form-button
+.stepper__step__form__button
     @include styles.green-button()
 
-.stepper-form-component
+.stepper__step__form__component
     width: 100%
-        
+
+.stepper__step__form__p
+    font-size: 29px
+    text-align: center
+
+@media only screen and (max-width: 1905px)
+    .stepper__step__form__p
+        font-size: 27px
+
+@media only screen and (max-width: 800px)
+    .stepper__step__form__p
+        font-size: 20px
+
+@media only screen and (max-width: 645px)
+    .stepper__step__form__p
+        font-size: 14px
